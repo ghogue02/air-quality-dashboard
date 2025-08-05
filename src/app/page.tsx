@@ -39,7 +39,8 @@ export default function Home() {
 
         const data = await response.json();
         setLocations(data.results);
-      } catch (e: any) {
+      } catch (e: unknown) {
+        if (e instanceof Error) {
         setError(e.message);
       } finally {
         setLoading(false);
