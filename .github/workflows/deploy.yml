@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20' # Use a stable Node.js version
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies 📦
         run: pnpm install --frozen-lockfile
 
