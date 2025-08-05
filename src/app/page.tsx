@@ -42,6 +42,7 @@ export default function Home() {
       } catch (e: unknown) {
         if (e instanceof Error) {
         setError(e.message);
+        }
       } finally {
         setLoading(false);
       }
